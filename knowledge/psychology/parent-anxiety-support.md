@@ -6,6 +6,9 @@ disease_type: psychosocial_support
 review_status: draft_doctor_review_required
 updated_at: 2026-06-10
 knowledge_version: 0.1.0
+source_refs: nci-support-families; clay-center-family-mental-health
+reviewer_notes: 待心理专业人员审核家长支持边界
+asset_refs: asset-night-emotion-scene; asset-parent-self-care
 ---
 
 # 家长焦虑怎么办

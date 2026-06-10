@@ -6,6 +6,9 @@ disease_type: ALL
 review_status: draft_doctor_review_required
 updated_at: 2026-06-10
 knowledge_version: 0.1.0
+source_refs: nci-child-all-pdq; local-child-all-2018; stjude-together-all
+reviewer_notes: 待儿科血液专科医生审核术语解释和风险边界
+asset_refs: asset-bone-marrow-factory; asset-xiaoxuebao-main
 ---
 
 # 儿童ALL是什么

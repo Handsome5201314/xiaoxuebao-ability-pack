@@ -7,6 +7,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+CATALOG_FILES = {"source-catalog.md", "asset-catalog.md"}
 
 
 def read_frontmatter(path: Path) -> dict[str, str]:
@@ -59,8 +60,10 @@ def test_skill_has_required_metadata_and_medical_boundaries():
 
 
 def test_knowledge_samples_have_required_metadata_and_public_scope():
-    files = sorted((ROOT / "knowledge").rglob("*.md"))
-    assert len(files) >= 8
+    files = sorted(
+        path for path in (ROOT / "knowledge").rglob("*.md") if path.name not in CATALOG_FILES
+    )
+    assert len(files) >= 30
     required = {
         "title",
         "source",
@@ -69,6 +72,9 @@ def test_knowledge_samples_have_required_metadata_and_public_scope():
         "review_status",
         "updated_at",
         "knowledge_version",
+        "source_refs",
+        "reviewer_notes",
+        "asset_refs",
     }
     disease_types = set()
 
@@ -80,6 +86,21 @@ def test_knowledge_samples_have_required_metadata_and_public_scope():
         disease_types.add(metadata["disease_type"])
 
     assert {"ALL", "AML", "CML", "CLL"} <= disease_types
+
+
+def test_source_and_asset_catalogs_exist_for_family_mvp():
+    source_catalog = ROOT / "knowledge/source-catalog.md"
+    asset_catalog = ROOT / "knowledge/asset-catalog.md"
+
+    assert source_catalog.exists()
+    assert asset_catalog.exists()
+
+    source_text = source_catalog.read_text(encoding="utf-8")
+    asset_text = asset_catalog.read_text(encoding="utf-8")
+    for phrase in ["NCI Childhood ALL PDQ", "COG Family Handbook", "CSCO"]:
+        assert phrase in source_text
+    for phrase in ["小雪宝的温暖魔法", "发热", "PICC", "饮食安全"]:
+        assert phrase in asset_text
 
 
 def test_evals_cover_safety_sources_privacy_family_isolation_and_child_style():

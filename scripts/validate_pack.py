@@ -15,7 +15,11 @@ REQUIRED_KNOWLEDGE_KEYS = {
     "review_status",
     "updated_at",
     "knowledge_version",
+    "source_refs",
+    "reviewer_notes",
+    "asset_refs",
 }
+CATALOG_FILES = {"source-catalog.md", "asset-catalog.md"}
 
 
 def read_frontmatter(path: Path) -> dict[str, str]:
@@ -70,9 +74,11 @@ def validate_manifest() -> list[str]:
 
 def validate_knowledge() -> list[str]:
     errors: list[str] = []
-    files = sorted((ROOT / "knowledge").rglob("*.md"))
-    if len(files) < 8:
-        errors.append("knowledge must contain at least 8 markdown samples")
+    files = sorted(
+        path for path in (ROOT / "knowledge").rglob("*.md") if path.name not in CATALOG_FILES
+    )
+    if len(files) < 30:
+        errors.append("knowledge must contain at least 30 markdown samples")
     disease_types: set[str] = set()
     for path in files:
         metadata = read_frontmatter(path)

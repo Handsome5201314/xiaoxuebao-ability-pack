@@ -12,7 +12,7 @@
 ## 目录
 
 - `skills/xiaoxuebao/`: 小雪宝核心 skill。
-- `knowledge/`: Markdown 医学科普知识样例。
+- `knowledge/`: 儿童白血病家属 MVP Markdown 知识条目、来源清单和资产清单。
 - `workflows/`: 家庭问答、微信客服、医生审核、知识更新流程。
 - `evals/`: 安全和隔离评测用例。
 - `hermes/`: Hermes 家庭 profile/container 模板。
@@ -25,3 +25,10 @@
 uv run --extra dev pytest
 python scripts/validate_pack.py
 ```
+
+## Knowledge 规则
+
+- 每条知识必须带 `source_refs`、`reviewer_notes`、`asset_refs`，便于追溯来源、医生审核和儿童友好资产挂接。
+- `knowledge/source-catalog.md` 记录本地 PDF、官方网页和待补指南；待补来源不能作为正式回答依据。
+- `knowledge/asset-catalog.md` 记录可复用或待生成的图卡、视频和儿童解释素材。
+- 新内容默认 `draft_doctor_review_required`，审核通过后再改为 `doctor_reviewed`。

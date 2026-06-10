@@ -6,6 +6,9 @@ disease_type: CML
 review_status: draft_doctor_review_required
 updated_at: 2026-06-10
 knowledge_version: 0.1.0
+source_refs: nccn-cml-patient; local-child-cml-consensus-2022-needed
+reviewer_notes: 待补儿童CML专家共识并审核靶向治疗概念边界
+asset_refs: asset-medicine-record-card
 ---
 
 # 儿童CML和靶向治疗

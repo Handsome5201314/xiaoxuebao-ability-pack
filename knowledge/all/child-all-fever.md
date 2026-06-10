@@ -6,6 +6,9 @@ disease_type: ALL
 review_status: draft_doctor_review_required
 updated_at: 2026-06-10
 knowledge_version: 0.1.0
+source_refs: csco-child-leukemia-2023; cog-family-handbook; nci-child-all-pdq
+reviewer_notes: 待医生审核发热分流表述是否符合本院出院宣教
+asset_refs: asset-red-flag-fever; asset-night-fever-scene
 ---
 
 # 治疗期间发热怎么办

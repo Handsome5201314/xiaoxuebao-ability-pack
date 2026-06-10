@@ -6,6 +6,9 @@ disease_type: CLL
 review_status: draft_doctor_review_required
 updated_at: 2026-06-10
 knowledge_version: 0.1.0
+source_refs: nccn-cll-patient; who-2022-haematolymphoid
+reviewer_notes: 待医生审核儿童CLL罕见性和鉴别提醒
+asset_refs: none
 ---
 
 # 儿童CLL为什么少见

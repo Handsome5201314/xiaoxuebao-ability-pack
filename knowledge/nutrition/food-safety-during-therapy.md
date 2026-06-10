@@ -6,6 +6,9 @@ disease_type: supportive_care
 review_status: draft_doctor_review_required
 updated_at: 2026-06-10
 knowledge_version: 0.1.0
+source_refs: cog-family-handbook; stjude-together-nutrition
+reviewer_notes: 待营养师或医生审核食物安全建议
+asset_refs: asset-food-safety; asset-nutrition-video
 ---
 
 # 饮食安全

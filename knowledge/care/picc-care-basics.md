@@ -6,6 +6,9 @@ disease_type: supportive_care
 review_status: draft_doctor_review_required
 updated_at: 2026-06-10
 knowledge_version: 0.1.0
+source_refs: local-picc-education-study; cog-family-handbook
+reviewer_notes: 待护理团队审核PICC和输液港家庭观察边界
+asset_refs: asset-central-line-alert; asset-family-care-scene
 ---
 
 # 管路家庭观察

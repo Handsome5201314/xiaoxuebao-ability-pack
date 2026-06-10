@@ -6,6 +6,9 @@ disease_type: AML
 review_status: draft_doctor_review_required
 updated_at: 2026-06-10
 knowledge_version: 0.1.0
+source_refs: local-child-aml-2024; cog-supportive-care; cog-family-handbook
+reviewer_notes: 待医生审核感染预防建议是否适合不同治疗阶段
+asset_refs: asset-hand-hygiene; asset-oral-care
 ---
 
 # 儿童AML治疗中的感染预防

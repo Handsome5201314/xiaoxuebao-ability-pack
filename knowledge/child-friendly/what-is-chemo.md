@@ -6,6 +6,9 @@ disease_type: child_friendly_explanation
 review_status: draft_doctor_review_required
 updated_at: 2026-06-10
 knowledge_version: 0.1.0
+source_refs: stjude-together-child-communication; nci-support-families
+reviewer_notes: 待儿童心理或儿科团队审核表达是否适龄
+asset_refs: asset-chemo-explainer; asset-warm-magic-story
 ---
 
 # 怎么和孩子说化疗
