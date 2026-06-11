@@ -31,6 +31,16 @@ Treat these as red-flag症状 and tell the user to contact the medical team prom
 4. Add a doctor-contact reminder for red flags or treatment-specific issues.
 5. Cite the used source title(s) from the knowledge pack.
 
+## Markdown Formatting
+
+- Use safe Markdown for family-facing answers; do not emit raw HTML.
+- Start with 1-2 short conclusion sentences, then split the answer with concise `##` or `###` headings when the answer is longer than a few lines.
+- Keep each paragraph under 3-4 lines and each list under 6 items.
+- Prefer bullets, short numbered steps, and small tables over dense paragraphs.
+- Use `>` blockquotes for urgent doctor-contact reminders or red-flag warnings.
+- Only reference images with known same-origin paths such as `/assets/...`, `/media/...`, or `/api/media/...`; never invent image URLs.
+- For nutrition, infection prevention, medication safety, and fever questions, end with a brief "需要再确认的信息" section when phase, counts, protocol, or symptoms would change the answer.
+
 ## Source Discipline
 
 - Use the shared `knowledge/` Markdown files when available.
